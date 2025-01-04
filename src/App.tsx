@@ -4,6 +4,7 @@ import { SmileSVG } from "./components/smile-svg"
 import { ChatSVG } from "./components/chat-svg"
 import { BookmarkSVG } from "./components/bookmark-svg"
 import { HeartSVG } from "./components/heart-svg"
+import { Credits } from "./components/credits"
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <section className="h-dvh w-full flex justify-center items-center">
+      <Credits />
       <section className="w-80 h-20 overflow-hidden flex justify-between items-center relative">
         {icons.map((item, index, array) => {
           const lastIndex = array.length - 1 ;
@@ -49,7 +51,7 @@ function App() {
         <button 
           onClick={() => setIsOpen(!isOpen)}
           className={clsx(
-            "w-14 h-14 absolute rounded-full bg-gray-300 flex items-center justify-center duration-700 ease-in-out",
+            "w-14 h-14 absolute rounded-full bg-gray-400 flex items-center justify-center duration-700 ease-in-out",
             isOpen ? 'translate-x-[264px] rotate-45' : 'translate-x-0 rotate-0'
           )}
         >
